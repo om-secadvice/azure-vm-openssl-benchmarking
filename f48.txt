@@ -1,0 +1,129 @@
+Starting benchmarking
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                48
+On-line CPU(s) list:   0-47
+Thread(s) per core:    2
+Core(s) per socket:    24
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz
+Stepping:              7
+CPU MHz:               2593.906
+BogoMIPS:              5187.81
+Virtualization:        VT-x
+Hypervisor vendor:     Microsoft
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              36608K
+NUMA node0 CPU(s):     0-47
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single tpr_shadow vnmi ept vpid fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap clflushopt avx512cd avx512bw avx512vl xsaveopt xsavec md_clear
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+md2               3359.70k     6838.17k     9166.51k    10143.40k    10401.11k
+mdc2                 0.00         0.00         0.00         0.00         0.00 
+md4              95210.31k   286731.99k   664263.85k   993918.29k  1141077.33k
+md5              69091.05k   199647.00k   429533.18k   604354.90k   695921.32k
+hmac(md5)        56541.84k   171899.78k   393592.58k   588450.82k   677115.22k
+sha1             81535.30k   237196.84k   547977.90k   827544.92k   966828.03k
+rmd160           45239.67k   108785.90k   195427.33k   247419.56k   260680.36k
+rc4             665325.62k   698577.64k   585574.49k   555482.11k   534926.68k
+des cbc          76852.91k    79182.57k    79511.89k    79833.09k    78736.04k
+des ede3         29678.57k    29589.53k    30419.20k    30646.95k    30138.37k
+idea cbc         92667.80k    96229.70k    97603.93k    97387.52k    98200.23k
+seed cbc         80927.17k    82257.11k    82232.49k    82553.17k    81190.91k
+rc2 cbc          48025.37k    48912.83k    49072.81k    49368.06k    49389.57k
+rc5-32/12 cbc   212989.68k   236822.83k   243152.30k   244993.37k   238990.68k
+blowfish cbc    131515.54k   141083.48k   142711.64k   143716.01k   144433.15k
+cast cbc        122625.41k   131202.54k   132177.07k   133497.51k   131244.03k
+aes-128 cbc     138839.37k   155800.34k   157831.17k   161031.51k   161824.77k
+aes-192 cbc     118816.16k   129715.03k   132497.75k   132700.84k   130684.25k
+aes-256 cbc     102133.80k   110503.25k   113172.57k   114156.89k   114767.19k
+camellia-128 cbc   115795.10k   178276.54k   200946.69k   207675.39k   206359.21k
+camellia-192 cbc   101156.66k   136985.88k   149391.10k   153041.24k   156063.06k
+camellia-256 cbc   100914.49k   136913.07k   149301.16k   154101.42k   152027.14k
+sha256           82734.49k   185069.55k   338725.97k   423346.86k   442867.71k
+sha512           57645.93k   233947.39k   391928.83k   579208.53k   671602.01k
+whirlpool        38707.24k    83409.30k   138417.49k   165770.58k   173154.30k
+aes-128 ige     141821.32k   148911.96k   149432.92k   150914.73k   147453.27k
+aes-192 ige     120862.81k   125123.05k   125840.47k   126793.05k   126894.08k
+aes-256 ige     104879.94k   108413.16k   108598.53k   108824.23k   106348.54k
+ghash          1414410.13k  5615778.56k  8567434.58k  9401684.65k  9707050.33k
+                  sign    verify    sign/s verify/s
+rsa  512 bits 0.000039s 0.000003s  25894.4 389204.1
+rsa 1024 bits 0.000086s 0.000006s  11647.2 170242.3
+rsa 2048 bits 0.000585s 0.000018s   1708.4  56934.6
+rsa 4096 bits 0.004127s 0.000060s    242.3  16535.2
+                  sign    verify    sign/s verify/s
+dsa  512 bits 0.000053s 0.000032s  18905.2  31028.9
+dsa 1024 bits 0.000088s 0.000072s  11327.3  13974.5
+dsa 2048 bits 0.000219s 0.000209s   4558.8   4784.7
+                              sign    verify    sign/s verify/s
+ 256 bit ecdsa (nistp256)   0.0000s   0.0001s  30830.7  13383.1
+ 384 bit ecdsa (nistp384)   0.0012s   0.0007s    866.9   1347.3
+ 521 bit ecdsa (nistp521)   0.0004s   0.0009s   2271.1   1108.8
+                              op      op/s
+ 256 bit ecdh (nistp256)   0.0001s  19971.9
+ 384 bit ecdh (nistp384)   0.0011s    892.8
+ 521 bit ecdh (nistp521)   0.0007s   1519.1
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-128-cbc    1170047.12k  1287814.34k  1278685.61k  1312806.91k  1320143.53k
+
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-192-cbc    1008882.63k  1075832.00k  1093910.19k  1091877.55k  1113598.63k
+
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-256-cbc     868005.87k   935826.75k   930739.80k   947972.10k   965091.33k
+
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-128-gcm     664965.75k  1527677.82k  2875482.28k  4346648.23k  5389470.38k
+
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-192-gcm     601505.32k  1359997.95k  2477055.32k  3774452.05k  4515973.80k
+
+OpenSSL 1.0.2k-fips  26 Jan 2017
+built on: reproducible build, date unspecified
+options:bn(64,64) md2(int) rc4(16x,int) des(idx,cisc,16,int) aes(partial) idea(int) blowfish(idx) 
+compiler: gcc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DKRB5_MIT -m64 -DL_ENDIAN -Wall -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -Wa,--noexecstack -DPURIFY -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DRC4_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes
+aes-256-gcm     595933.81k  1428895.42k  2382937.34k  3370849.96k  3887458.99k
+
+
+
+
