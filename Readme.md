@@ -1037,7 +1037,7 @@ ax.set_ylabel('Key Size')
 
 
     
-![png](images/images/output_50_1.png)
+![png](images/output_50_1.png)
     
 
 
